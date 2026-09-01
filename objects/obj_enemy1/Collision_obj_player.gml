@@ -1,2 +1,2 @@
-// Destroy this enemy when it hits the player
+inflict_damage(30);
 instance_destroy();

@@ -20,3 +20,12 @@ x = clamp(x, sprite_width / 2, room_width-sprite_width / 2)
 
 // y axis or vertical
 y = clamp(y, sprite_height / 2, room_height - sprite_height / 2)
+
+// Fire bullet when holding Space and shooting is allowed
+if (keyboard_check(vk_space) && canShoot) {
+    instance_create_layer(x, y, "Instances", obj_playerBullet);
+    canShoot = false;
+
+    // Set cooldown alarm to shoot ~2 times per second
+    alarm[0] = game_get_speed(gamespeed_fps) / 2;
+}

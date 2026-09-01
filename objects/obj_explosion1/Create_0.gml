@@ -1,0 +1,2 @@
+// Play sound effect for enemy destruction
+audio_play_sound(snd_explosion1, 10, false);
